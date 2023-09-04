@@ -4,7 +4,7 @@ This repository contains the implementation of various protein language models t
 
 **For more details, see:** [Link after publishing](https://doi.org/10.1093/bioinformatics/). 
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://github.com/Ieremie/reduced-alph-PLM/blob/main/proemb/embeddings.gif)
 
 ## About
 **Motivation**: Protein Language Models (PLM), which borrowed ideas for modelling and inference from
