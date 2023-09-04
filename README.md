@@ -1,4 +1,4 @@
-# PLM with reduced amino acid alphabets
+# PLMs meet reduced amino acid alphabets
 
 This repository contains the implementation of various protein language models trained on reduced amino acid alphabets, along with the notebooks to recreate the figures found in the paper.
 
