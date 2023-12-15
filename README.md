@@ -7,19 +7,10 @@ This repository contains the implementation of various protein language models t
 ![Alt Text](https://github.com/Ieremie/reduced-alph-PLM/blob/main/proemb/embeddings.gif)
 
 ## About
-**Motivation**: Protein Language Models (PLM), which borrowed ideas for modelling and inference from
-Natural Language Processing, have demonstrated the ability to extract meaningful representations in
-an unsupervised way. This led to significant performance improvement in several downstream tasks.
-Clustering amino acids based on their physical-chemical properties to achieve reduced alphabets has
-been of interest in past research, but their application to PLMs or folding models is unexplored.
+**Motivation**: Protein Language Models (PLMs), which borrowed ideas for modelling and inference from Natural Language Processing, have demonstrated the ability to extract meaningful representations in an unsupervised way. This led to significant performance improvement in several downstream tasks. Clustering amino acids based on their physical-chemical properties to achieve reduced alphabets has been of interest in past research, but their application to PLMs or folding models is unexplored.
 
-**Results**: Here, we investigate the efficacy of PLMs trained on reduced amino acid alphabets in capturing
-evolutionary information, and we explore how much loss of fidelity in the space of sequence impacts
-learned representations and downstream task performance. Our empirical work shows that PLMs trained
-on the full alphabet and a large number of sequences capture fine details that are lost in alphabet reduction
-methods. We further show the ability of ESMFold to fold CASP14 protein sequences translated using a
-reduced alphabet. For 10 proteins out of the 50 targets, reduced alphabets improve structural predictions
-with LDDT-Cα differences of up to 19%.
+**Results**: Here, we investigate the efficacy of PLMs trained on reduced amino acid alphabets in capturing evolutionary information, and we explore how the loss of protein sequence information impacts learned representations and downstream task performance. Our empirical work shows that PLMs trained on the full alphabet and a large number of sequences capture fine details that are lost in alphabet reduction methods. We further show the ability of a structure prediction model(ESMFold) to fold CASP14 protein sequences translated using a reduced alphabet. For 10 proteins out of the 50 targets, reduced alphabets improve structural predictions withLDDT-Cα differences of up to 19%.
+
 
 
 ## Datasets
