@@ -21,12 +21,14 @@ The model is trained and evaluated using publicly available datasets:
 - Fold recognition dataset: [TAPE](https://github.com/songlab-cal/tape)
 - FLIP benchmark datasests: [FLIP](https://github.com/J-SNACKKB/FLIP)
 
+All of these datasets can be downloaded using the release feature on Github, apart from Uniref90 which is very large. This can be downloaded and then modified using our dataset script.
+
 
 ## Pretraining PLMs on reduced alphabets
 To pretrain the protein language model you can run [`train_prose_multitask.py`](./proemb/train_prose_multitask.py).
 The implementation uses multiple GPUs and can be run on a single machine or on a cluster. The scripts for running the
 file on a cluster can be found at [`iridis-scripts`](./proemb/iridis-scripts/multitask). The progress of the training
-can be monitored using [`tensorboard.sh`](./proemb/iridis-scripts/tensorboard.sh).
+can be monitored using [`tensorboard.sh`](./proemb/iridis-scripts/tensorboard.sh). All trained models can be downloaded in the release section.
 
 ## Finetuning on downstream tasks
 After pretraining the protein language model, you can finetune it on downstream tasks. You can do this by running
