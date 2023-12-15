@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=1080-12gpus
 
-#SBATCH --nodes=1                # node count
+#SBATCH --nodes=3                # node count
 #SBATCH --ntasks-per-node=4      # total number of tasks per node
 #SBATCH --cpus-per-task=7        # cpu-cores per task (>1 if multi-threaded tasks), (28 CPUS max on 1080ti nodes)
 #SBATCH --mem=100GB              # make sure we use all the memory available        

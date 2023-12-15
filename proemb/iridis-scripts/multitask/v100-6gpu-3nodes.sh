@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=v100-6gpu
-#SBATCH --nodes=2               # node count
+#SBATCH --nodes=3               # node count
 #SBATCH --ntasks-per-node=2      # total number of tasks per node
 #SBATCH --cpus-per-task=20       # cpu-cores per task (>1 if multi-threaded tasks), (40 CPUS max on v100 nodes)
 #SBATCH --mem=150G

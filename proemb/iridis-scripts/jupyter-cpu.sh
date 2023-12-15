@@ -11,12 +11,10 @@
 #SBATCH --ntasks-per-node=1      # total number of tasks per node
 #SBATCH --cpus-per-task=16
 
-echo "caca1"
 
 module load conda
-echo "caca2"
 source activate prose
-echo "caca3"
+
 
 cd $HOME/protein-embeddings/proemb
 

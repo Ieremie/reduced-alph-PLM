@@ -1,12 +1,23 @@
 #!/bin/bash
+
+module load conda
+source activate prose
+
+
 # Replace file_path with the actual path to your file
 cd $1
-for col in 3 4 5; do
+for col in 0 1 2; do
   # Extract the values using grep and awk, filter out non-numeric values
-  values=$(grep -r "FOLD/accuracy:test" --exclude-dir='*'  | awk -v col="$col" '{print $col}' | tr '\n' ' ')
+  values=$(grep -r "accuracy/dataloader_idx_$col': {'test': " --exclude-dir='*' | awk -F'[(,]' '{print $2}' | tr '\n' ' ')
 
-  # Calculate the mean and standard deviation using Python
-  python -u <<EOF
+  # if values is empty we try another grep
+  if [ -z "$values" ]
+  then
+    values=$(grep -r "FOLD/accuracy:test" --exclude-dir='*'  | awk -v select="$((col+3))" '{print $select}' | tr '\n' ' ')
+  fi
+
+# Calculate the mean and standard deviation using Python
+python -u <<EOF
 import numpy as np
 values = np.array('$values'.split())
 print(values)
@@ -22,3 +33,4 @@ print("")
 EOF
 done
 
+values=$(grep -r "Enzyme/accuracy': {'test': " --exclude-dir='*'  |  awk -F'[(,]' '{print $2}' | tr '\n' ' ')

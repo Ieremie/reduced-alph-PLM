@@ -1,9 +1,20 @@
 #!/bin/bash
 # Replace file_path with the actual path to your file
+
+module load conda
+source activate prose
+
 cd $1
 
 # Extract the values using grep and awk, filter out non-numeric values
-values=$(grep -r "Enzyme/accuracy:test " --exclude-dir='*'  | awk  '{print $3}' | tr '\n' ' ')
+values=$(grep -r "Enzyme/accuracy': {'test': " --exclude-dir='*'  |  awk -F'[(,]' '{print $2}' | tr '\n' ' ')
+
+# if values is empty we try another grep
+if [ -z "$values" ]
+then
+    values=$(grep -r "Enzyme/accuracy:test " --exclude-dir='*'  | awk  '{print $3}' | tr '\n' ' ')
+fi
+
 
 # Calculate the mean and standard deviation using Python
 python -u <<EOF
