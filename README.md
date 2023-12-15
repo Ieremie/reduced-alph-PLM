@@ -43,11 +43,12 @@ If you want to run these experiments on a cluster, take a look in the folder: [`
 ## Reproducing plots from the paper
 To reproduce the plots for the amino acid embedding projection using PCA, use the notebook [`aa_embeddings.ipynb`](./proemb/media/aa_embeddings.ipynb).
 For experiments involving protein structure prediction using reduced amino acid alphabets, use the notebook [`esm-structure-prediction.ipynb`](./proemb/media/esm-structure-prediction.ipynb).
-This notebook contains code for generating the structures with ESMFold and everything else needed to recreate the results.
+This notebook contains code for generating the structures with ESMFold and everything else needed to recreate the results. 
 
-For more information on the steps taken to create the WASS13 alphabet, take a look at: [`surface_plots.ipynb`](./proemb/media/surface_plots.ipynb)
+For more information on the steps taken to create the WASS14 alphabet, take a look at: [`surface_plots.ipynb`](./proemb/media/surface_plots.ipynb)
 
-
+## Embedding protein sequences
+If you want to embedd a set of protein sequences using any of the models, you can use the [`embedd.py`](./proemb/embedd.py) script. You only need to provide a fasta file.
 
 #### This code contains various bits of code taken from other sources. If you find the repo useful, please cite the following work too:
 
