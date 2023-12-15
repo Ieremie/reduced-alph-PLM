@@ -1,10 +1,10 @@
-# PLM with reduced amino acid alphabets
+# PLMs meet reduced amino acid alphabets
 
 This repository contains the implementation of various protein language models trained on reduced amino acid alphabets, along with the notebooks to recreate the figures found in the paper.
 
 **For more details, see:** [Link after publishing](https://doi.org/10.1093/bioinformatics/). 
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://github.com/Ieremie/reduced-alph-PLM/blob/main/proemb/embeddings.gif)
 
 ## About
 **Motivation**: Protein Language Models (PLM), which borrowed ideas for modelling and inference from
